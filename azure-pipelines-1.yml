@@ -11,6 +11,7 @@ pool:
 
 - task: AzureLoadTest@1
   inputs:
+    webAppName: 'drudge.com'
     azureSubscription: 'Azure_JMeter'
     loadTestConfigFile: 'drudge.jmx'
     resourceGroup: 'iTheasLoadTestPreview'
