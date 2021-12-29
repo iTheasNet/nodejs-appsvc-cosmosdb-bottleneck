@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="New Collection" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="HOST" elementType="Argument">
+            <stringProp name="Argument.name">HOST</stringProp>
+            <stringProp name="Argument.value">apexchat.co</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Http URL/API Test" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ChatStart" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;tempId&quot;: &quot;a39f6b18-bd35-403e-a480-a94019ee676b&quot;,&#xd;
+    &quot;companyKey&quot;: &quot;zain1&quot;,&#xd;
+    &quot;firstMessage&quot;: {&#xd;
+        &quot;tempId&quot;: &quot;4265c1df-1c6d-4998-9372-b20b5cbbad29&quot;,&#xd;
+        &quot;message&quot;: {&#xd;
+   &#xd;
+            &quot;chatId&quot;: 0,&#xd;
+            &quot;answers&quot;: &quot;[{\&quot;option\&quot;:\&quot;I am Ironman\&quot;}]&quot;,&#xd;
+            &quot;participantId&quot;: 0,&#xd;
+            &quot;userId&quot;: 0,&#xd;
+            &quot;participantDisplayName&quot;: null,&#xd;
+            &quot;text&quot;: &quot;qwqw&quot;,&#xd;
+            &quot;guid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,&#xd;
+            &quot;originalText&quot;: null,&#xd;
+            &quot;translatedText&quot;: null,&#xd;
+            &quot;originalTextLanguage&quot;: null,&#xd;
+            &quot;translatedTextLanguage&quot;: null,&#xd;
+            &quot;createdOn&quot;: &quot;/Date(1628502800067)/&quot;,&#xd;
+            &quot;isGreeting&quot;: false,&#xd;
+            &quot;maskedText&quot;: null,&#xd;
+            &quot;randomNumber&quot;: null,&#xd;
+            &quot;virtualAssistantReference&quot;: null,&#xd;
+            &quot;virtualAssistantStatus&quot;: 0,&#xd;
+            &quot;scriptAnswerId&quot;: 2265973,&#xd;
+            &quot;questionType&quot;: 0,&#xd;
+            &quot;visitorResponseType&quot;: 0,&#xd;
+            &quot;questionTypeDelaySeconds &quot;: 0,&#xd;
+            &quot;options&quot;: null,&#xd;
+            &quot;visitorResponseStatus&quot;: 0,&#xd;
+            &quot;questionTypeDisplayListForVisitor&quot;: false,&#xd;
+            &quot;questionTypeChatLogIdToBeUpdated&quot;: null,&#xd;
+            &quot;questionTypeResponseChatLogId&quot;: null,&#xd;
+            &quot;isUnread&quot;: null,&#xd;
+            &quot;visitorSelectedOptions&quot;: null,&#xd;
+            &quot;isChatEnded&quot;: false,&#xd;
+            &quot;isTranslating&quot;: false,&#xd;
+            &quot;agentScriptOption&quot;: null,&#xd;
+            &quot;messageSequence&quot;: null,&#xd;
+            &quot;isNextQuestionMapped&quot;: false,&#xd;
+            &quot;isFromPreChat&quot;: false,&#xd;
+            &quot;shouldShowChatEndedMessage&quot;: false,&#xd;
+            &quot;systemMessageType&quot;: null,&#xd;
+            &quot;hasCallConnectAction&quot;: false,&#xd;
+            &quot;isCallConnectAvailable&quot;: false,&#xd;
+            &quot;hasNextCallConnectAction&quot;: false,&#xd;
+            &quot;isNextCallConnectAvailable&quot;: false,&#xd;
+            &quot;isPredefinedPokeMessage&quot;: false,&#xd;
+            &quot;isPredefinedResponse&quot;: false,&#xd;
+            &quot;isSkippable&quot;: false,&#xd;
+            &quot;messagePlaceholder&quot;: null,&#xd;
+            &quot;delayTime&quot;: null,&#xd;
+            &quot;messageType&quot;: 2&#xd;
+        }&#xd;
+    },&#xd;
+    &quot;InitialMessages&quot;: [&#xd;
+        {&#xd;
+            &quot;tempId&quot;: &quot;9174a05e-d0cb-46d0-8cf3-42f2f6fe54f7&quot;,&#xd;
+            &quot;message&quot;: {&#xd;
+                &quot;id&quot;: 0,&#xd;
+                &quot;chatId&quot;: 0,&#xd;
+                &quot;visitorId&quot;: 0,&#xd;
+                &quot;answers&quot;: null,&#xd;
+                &quot;participantId&quot;: 0,&#xd;
+                &quot;userId&quot;: -1,&#xd;
+                &quot;text&quot;: &quot;hehe&quot;,&#xd;
+                &quot;messageType&quot;: 2,&#xd;
+                &quot;guid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,&#xd;
+                &quot;originalText&quot;: null,&#xd;
+                &quot;translatedText&quot;: null,&#xd;
+                &quot;originalTextLanguage&quot;: null,&#xd;
+                &quot;translatedTextLanguage&quot;: null,&#xd;
+                &quot;createdOn&quot;: &quot;/Date(1628502792308)/&quot;,&#xd;
+                &quot;isGreeting&quot;: false,&#xd;
+                &quot;maskedText&quot;: null,&#xd;
+                &quot;randomNumber&quot;: null,&#xd;
+                &quot;virtualAssistantReference&quot;: null,&#xd;
+                &quot;virtualAssistantStatus&quot;: 0,&#xd;
+                &quot;scriptAnswerId&quot;: 0,&#xd;
+                &quot;questionType&quot;: 0,&#xd;
+                &quot;visitorResponseType&quot;: 0,&#xd;
+                &quot;questionTypeDelaySeconds &quot;: 0,&#xd;
+                &quot;options&quot;: null,&#xd;
+                &quot;visitorResponseStatus&quot;: 0,&#xd;
+                &quot;questionTypeDisplayListForVisitor&quot;: false,&#xd;
+                &quot;questionTypeChatLogIdToBeUpdated&quot;: null,&#xd;
+                &quot;questionTypeResponseChatLogId&quot;: null,&#xd;
+                &quot;isUnread&quot;: null,&#xd;
+                &quot;visitorSelectedOptions&quot;: null,&#xd;
+                &quot;isChatEnded&quot;: false,&#xd;
+                &quot;isTranslating&quot;: false,&#xd;
+                &quot;agentScriptOption&quot;: null,&#xd;
+                &quot;messageSequence&quot;: null,&#xd;
+                &quot;isNextQuestionMapped&quot;: false,&#xd;
+                &quot;isFromPreChat&quot;: false,&#xd;
+                &quot;shouldShowChatEndedMessage&quot;: false,&#xd;
+                &quot;systemMessageType&quot;: null,&#xd;
+                &quot;hasCallConnectAction&quot;: false,&#xd;
+                &quot;isCallConnectAvailable&quot;: false,&#xd;
+                &quot;hasNextCallConnectAction&quot;: false,&#xd;
+                &quot;isNextCallConnectAvailable&quot;: false,&#xd;
+                &quot;isPredefinedPokeMessage&quot;: false,&#xd;
+                &quot;isPredefinedResponse&quot;: false,&#xd;
+                &quot;isSkippable&quot;: false,&#xd;
+                &quot;messagePlaceholder&quot;: null,&#xd;
+                &quot;delayTime&quot;: null,&#xd;
+                &quot;language&quot;: null&#xd;
+            }&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;widgetType&quot;: 1,&#xd;
+    &quot;agentDetail&quot;: {&#xd;
+        &quot;name&quot;: &quot;Jeff&quot;,&#xd;
+        &quot;agentId&quot;: 12345678&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/Services/ApexChatService.svc/chat/start</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Headers" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="apexchat-password" elementType="Header">
+                <stringProp name="Header.name">apexchat-password</stringProp>
+                <stringProp name="Header.value">123456</stringProp>
+              </elementProp>
+              <elementProp name="apexchat-company" elementType="Header">
+                <stringProp name="Header.name">apexchat-company</stringProp>
+                <stringProp name="Header.value">vendormax</stringProp>
+              </elementProp>
+              <elementProp name="apexchat-username" elementType="Header">
+                <stringProp name="Header.name">apexchat-username</stringProp>
+                <stringProp name="Header.value">zain</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
