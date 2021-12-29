@@ -12,10 +12,10 @@ pool:
 variables:
   webAppName: 'Test'
   serviceConnection: '<Name of your webARM Service connection>'
-  azureSubscriptionId: '<Azure subscriptionId>'
-  loadTestResource: '<Name of your load test resource>'
-  loadTestResourceGroup: '<Name of your load test resource group>'
-  location: 'EAST US'
+  azureSubscriptionId: '2fc4f763-1996-46a1-837a-8c503c2d8140'
+  loadTestResource: 'iTheasLoadTestPeview'
+  loadTestResourceGroup: 'iTheasLoadTestPreview'
+  location: 'South Central US'
 
 
 stages:
