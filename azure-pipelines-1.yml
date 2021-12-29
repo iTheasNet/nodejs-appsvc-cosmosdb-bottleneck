@@ -9,7 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 steps:
-  - 
 - task: AzureLoadTest@1
   inputs:
     webAppName: 'drudge.com'
